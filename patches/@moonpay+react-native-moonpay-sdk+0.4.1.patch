@@ -1,0 +1,15 @@
+diff --git a/node_modules/@moonpay/react-native-moonpay-sdk/dist/index.js b/node_modules/@moonpay/react-native-moonpay-sdk/dist/index.js
+index 807f1a2..58b058a 100644
+--- a/node_modules/@moonpay/react-native-moonpay-sdk/dist/index.js
++++ b/node_modules/@moonpay/react-native-moonpay-sdk/dist/index.js
+@@ -1013,8 +1013,9 @@ var InAppBrowser = class {
+     }
+   }
+   async openWithExpoWebBrowserAsync(url) {
+-    const WebBrowser = await import("expo-web-browser");
+     try {
++      const WebBrowser = await import("expo-web-browser");
++
+       await WebBrowser.openBrowserAsync(url);
+     } catch (error) {
+       this.log({ error });
