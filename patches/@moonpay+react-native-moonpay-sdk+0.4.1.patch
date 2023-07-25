@@ -1,7 +1,18 @@
 diff --git a/node_modules/@moonpay/react-native-moonpay-sdk/dist/index.js b/node_modules/@moonpay/react-native-moonpay-sdk/dist/index.js
-index 807f1a2..58b058a 100644
+index 807f1a2..0a7d0ee 100644
 --- a/node_modules/@moonpay/react-native-moonpay-sdk/dist/index.js
 +++ b/node_modules/@moonpay/react-native-moonpay-sdk/dist/index.js
+@@ -993,8 +993,8 @@ var InAppBrowser = class {
+   async open(url) {
+     let isExpo = false;
+     try {
+-      const Constants = await import("expo-constants");
+-      isExpo = Constants.default.executionEnvironment === Constants.ExecutionEnvironment.Standalone || Constants.default.executionEnvironment === Constants.ExecutionEnvironment.StoreClient;
++      // const Constants = await import("expo-constants");
++      // isExpo = Constants.default.executionEnvironment === Constants.ExecutionEnvironment.Standalone || Constants.default.executionEnvironment === Constants.ExecutionEnvironment.StoreClient;
+     } catch (error) {
+       this.log({ error });
+     }
 @@ -1013,8 +1013,9 @@ var InAppBrowser = class {
      }
    }
